@@ -11,7 +11,7 @@
         Dim informe As New InformeClientes
         Dim informe2 As New InformePorPaises
         Dim informe3 As New InformePedidos
-        'Dim informe4 As New InformeGrafico
+        'Dim informe4 As New InformeGrafico 
 
 
         informe.SetDatabaseLogon("administrador", "admin123.")
