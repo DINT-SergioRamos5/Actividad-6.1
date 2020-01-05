@@ -1,0 +1,55 @@
+﻿<Window x:Class="Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cr="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"
+    Title="WPF Crystal Report Viewer" Height="600" Width="800" >
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="Informe1Tab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Imagenes/head.ico" Width="30" Height="30"></Image>
+                        <Label FontSize="15" FontWeight="Bold">Informe 1</Label>
+                    </StackPanel>
+                </TabItem.Header>
+                <cr:CrystalReportsViewer Name="ReportViewer" />        
+            </TabItem>
+            <TabItem x:Name="Informe2Tab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Imagenes/world.ico" Width="30" Height="30"></Image>
+                        <Label FontSize="15" FontWeight="Bold">Informe 2</Label>
+                    </StackPanel>
+                </TabItem.Header>
+                <cr:CrystalReportsViewer Name="ReportViewer2" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Imagenes/euro.ico" Width="30" Height="30"></Image>
+                        <Label FontSize="15" FontWeight="Bold">Informe 3</Label>
+                    </StackPanel>
+                </TabItem.Header>
+                <cr:CrystalReportsViewer Name="ReportViewer3" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Imagenes/genero.ico" Width="30" Height="30"></Image>
+                        <Label FontSize="15" FontWeight="Bold">Informe 4</Label>
+                    </StackPanel>
+                </TabItem.Header>
+                <!--<cr:CrystalReportsViewer Name="ReportViewer4"/>-->
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Imagenes/car.ico" Width="30" Height="30"></Image>
+                        <Label FontSize="15" FontWeight="Bold">Informe 5</Label>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Window>
