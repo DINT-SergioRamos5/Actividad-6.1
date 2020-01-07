@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class InformeEnvios
+Public Class SubInformeEnvios
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class InformeEnvios
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "InformeEnvios.rpt"
+            Return "SubInformeEnvios.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class InformeEnvios
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "Actividad_6._1.InformeEnvios.rpt"
+            Return "Actividad_6._1.SubInformeEnvios.rpt"
         End Get
         Set
             'Do nothing
@@ -78,7 +78,7 @@ Public Class InformeEnvios
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property DetailSection2() As CrystalDecisions.CrystalReports.Engine.Section
+    Public ReadOnly Property Section4() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(3)
         End Get
@@ -86,7 +86,7 @@ Public Class InformeEnvios
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Section4() As CrystalDecisions.CrystalReports.Engine.Section
+    Public ReadOnly Property Section5() As CrystalDecisions.CrystalReports.Engine.Section
         Get
             Return Me.ReportDefinition.Sections(4)
         End Get
@@ -94,15 +94,7 @@ Public Class InformeEnvios
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Section5() As CrystalDecisions.CrystalReports.Engine.Section
-        Get
-            Return Me.ReportDefinition.Sections(5)
-        End Get
-    End Property
-    
-    <Browsable(false),  _
-     DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_SubInformeEnviosrpt_Grafico() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_Grafico() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(0)
         End Get
@@ -110,7 +102,7 @@ Public Class InformeEnvios
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedInformeEnvios
+Public Class CachedSubInformeEnvios
     Inherits Component
     Implements ICachedReport
     
@@ -152,7 +144,7 @@ Public Class CachedInformeEnvios
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As InformeEnvios = New InformeEnvios()
+        Dim rpt As SubInformeEnvios = New SubInformeEnvios()
         rpt.Site = Me.Site
         Return rpt
     End Function
